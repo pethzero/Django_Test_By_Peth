@@ -1,5 +1,12 @@
 # Django_Test
 
+วิธีรัน คือ
+py manage.py runserver
+
+
+
+
+
 Django: Calculate the Sum of the column values through query
 https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
 
