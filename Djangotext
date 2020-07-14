@@ -1,0 +1,19 @@
+คำสั่ง
+ขั้นตอนการติดตั้ง Django ด้วย Python3 บน Windows
+เปิด cmd โดย Run As Administrator.
+ใช้คำสั่ง python -m pip install django.
+ทดสอบโดยใช้คำสั่ง python -m django --version.
+สร้าง Project ด้วยคำสั่ง django-admin startproject mysite.
+เข้าไปใน project “mysite” directory ด้วยคำสั่ง cd mysite.
+ทดสอบ runserver. python manage.py runserver.
+
+สร้าง databese
+ซึ่งสิ่งที่เราจะทำเป็นอย่างแรกก็คือการสร้าง migration ที่จำเป็นของระบบ ด้วยคำสั่ง makrmigrations ข้างล่างนี้เลย
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+admin.py
+admin.site.register(่ชื่อของ class ไฟล์ model)

@@ -1,0 +1,25 @@
+สร้างใน views.py
+def "ชื่อตัวแปร"(request):
+	try:
+		data = {} //
+		ชื่อตัวแปรรับข้อมูล = []  //
+    stationall = [] 
+		stationtype = []
+		station_list = []
+		ชื่อตัวแปรรับข้อมูล = ชื่อตัวแปรรับ classใน model.py.objects.filter(ตัวแปรในclass=ชนิดข้อมูล)
+		
+		for z in laser:
+			#print(z.current_station)
+			stationall.append(z.current_station)
+			stationtype = set(stationall)
+		station_list = list(stationtype) #แสดงข้อมูลของ list ชนิดแต่ละ station
+		station_list_sum = dict(Counter(stationall)) 
+		#แสดงข้อมูลของโดยแปลเป็น dict และทำการ Counter เพื่อหาจำนวนแต่ละชอนด
+		data['station_sum_of_all'] = len(stationall)
+		data['station_list_all'] = station_list
+		data['station_type_all'] = len(stationtype)
+		data['station_type_sum'] = station_list_sum
+	except Exception as e:
+		print(e)
+			
+	return HttpResponse(simplejson.dumps(data,default=str), {'ContentType':'application/json'} )

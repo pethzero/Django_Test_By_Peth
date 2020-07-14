@@ -1,0 +1,24 @@
+<script>
+    $.ajax({
+        url:'/"ชื่อ คลาสของ def ใน view.py"/',
+        type:'GET',
+        success: function(result){
+            $("#ชื่อตัวแปร").html(result['ตัวแปร'])
+            console.log(result['station_type_sum']['LIP2'])
+            
+            result['ชื่อคลาส ใน python'] การเรียก ข้อมูล
+            $.each(ชื่อ variable,function(ชื่อตัวแปร object index ตำแหน่ง 0,ชื่อตัวแปร object index ตำแหน่ง 1)
+            {           
+                เป็นการวนลูป
+            })
+
+           var A = $("#dis_a").html(result['ชื่อ คลาสเพื่อเรียกไปใช้ใน HTML']) //dis_a คือ id ชื่อ html ไว้เรียกโชว์ข้อมูล
+            z.push(x) การพิ่มข้อมูลเข้าไปใน array z
+            เช่น z = []
+            x = [x,y,z]
+            z = [x,y,z]
+            })
+        }
+    })
+</script>
+
