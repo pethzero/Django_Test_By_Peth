@@ -6,6 +6,10 @@ def blog_list(request):
     data = Blog.objects.all()
     return render(request, 'blog_list.html',{'m':data})
 
+def index(request):
+    data = Blog.objects.all()
+    return render(request, 'index.html',{'m':data})
+
 def blog_detail(request, **kwargs):
     pk = kwargs['pk']
     blog = Blog.objects.get(pk=pk)
