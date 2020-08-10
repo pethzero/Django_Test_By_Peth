@@ -17,9 +17,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name='home'),
+    url(r'^$', home, name='home'),
+    url(r'simple_upload', simple_upload, name='simple_upload'),
+    url(r'model_form_upload', model_form_upload, name='model_form_upload'),
     url(r'^blog/(?P<pk>\d+)$', blog_detail, name='blog')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
