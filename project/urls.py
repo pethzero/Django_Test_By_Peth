@@ -27,9 +27,10 @@ urlpatterns = [
     url(r'^simple_upload', simple_upload, name='simple_upload'),
     url(r'^model_form_upload', model_form_upload, name='model_form_upload'),
     url(r'^blog/(?P<pk>\d+)$', blog_detail, name='blog'),
-
+    url(r'^profile', profile, name='profile'),
     #API
     url(r'^api', api, name='api'),
+    
 ]
 
 if settings.DEBUG:

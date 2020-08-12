@@ -55,6 +55,10 @@ def model_form_upload(request):
     return render(request, 'model_form_upload.html', {'form': form})
 
 
+def profile(request):
+    
+    return render(request, 'profile.html')
+
 # API 
 def api(request):
     json_object = {'key': "value"}
