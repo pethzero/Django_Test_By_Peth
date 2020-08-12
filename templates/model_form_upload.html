@@ -1,10 +1,32 @@
 {% extends 'base.html' %}
 
+{% block css %}
+<style>
+.fileUpload {
+position: relative;
+overflow: hidden;
+margin: 10px;
+}
+.fileUpload input.upload {
+position: absolute;
+top: 0;
+right: 0;
+margin: 0;
+padding: 0;
+font-size: 20px;
+cursor: pointer;
+opacity: 0;
+filter: alpha(opacity=0);
+}
+</style>
+
+
+{% endblock %}
 {% block content %}
-  <form method="post" enctype="multipart/form-data">
+  <form  method="post" enctype="multipart/form-data" class="fileUpload btn btn-primary" >
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
+    {{ form.as_p}}
+    <input type="submit" value="Upload" class="upload" >
   </form>
 
   <p><a href="{% url 'home' %}">Return to home</a></p>

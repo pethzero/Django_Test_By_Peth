@@ -13,9 +13,10 @@
       <hr>
       {% for blog in m %}
         <h2>{{blog.title}}</h2>
-        <p><strong>{{blog.date}}</strong></p>
+        <!-- <p><strong>{{blog.date}}</strong></p> -->
         <p>
           {{blog.body|truncatechars:100}}
+  
           <a href="{% url 'blog' pk=blog.pk %}">Read more</a>
         </p>
         <hr>
