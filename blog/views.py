@@ -3,8 +3,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 
-
+from .serializers import*
 from .models import *
 from .forms import *
 
@@ -56,10 +58,20 @@ def model_form_upload(request):
 
 
 def profile(request):
-    
     return render(request, 'profile.html')
 
 # API 
-def api(request):
+
+def apitest(request):
     json_object = {'key': "value"}
     return JsonResponse(json_object)
+
+
+class RapperViewSet(viewsets.ModelViewSet):
+    queryset = Rapper.objects.all().order_by('aka')
+    serializer_class = RapperSerializer
+
+
+class BlogViewSet(ModelViewSet):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer

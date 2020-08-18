@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html>
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Simple File Upload</title>
+	<title>X System</title>
+
+	
+	{% block extra_css %}
+	{% endblock %}
+	<style>
+
+    
+	</style>
+	{% block css %}
+	{% endblock %}
 </head>
 
 <body>
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
+	
+ 
+</div>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  
+	{% block js %}
+	{% endblock %}
 </body>
-
 </html>
