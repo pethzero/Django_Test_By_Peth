@@ -23,3 +23,7 @@ def "ชื่อตัวแปร"(request):
 		print(e)
 			
 	return HttpResponse(simplejson.dumps(data,default=str), {'ContentType':'application/json'} )
+	
+	
+# temp = list(npi.values('id','assign','Customer','ProjectType__name','Job_no','projectstatus','ProjectName','assignengineer'))
+
