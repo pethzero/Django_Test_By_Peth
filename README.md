@@ -8,7 +8,7 @@
 เข้าไปใน project "ชื่อไฟ directory ด้วยคำสั่ง cd "ชื่อไฟล์"
 ทดสอบ runserver.  python manage.py runserver
 สร้าง app เพื่อเขียนหลังบ้าน
-django-admin startapp
+django-admin startapp "ชื่อโฟเดอ"
 
 
 
