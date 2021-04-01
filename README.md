@@ -18,3 +18,6 @@ Django: Calculate the Sum of the column values through query
 https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
 
 https://docs.djangoproject.com/en/dev/topics/db/aggregation/#generating-aggregates-over-a-queryset
+
+EV
+https://python3.wannaphong.com/2014/10/virtualenv-python.html
